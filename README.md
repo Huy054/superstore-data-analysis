@@ -26,17 +26,9 @@ Về Khách hàng: Phân khúc Consumer (Người tiêu dùng cá nhân) là nh�
 
 Về Thời gian: Doanh thu có xu hướng tăng mạnh vào các tháng cuối năm (Quý 4), đặc biệt là tháng 11 và 12, cho thấy tính mùa vụ rõ rệt trong hành vi mua sắm.
 
-🖼️ Hình ảnh Demo
-
-1. Dashboard Phân tích (Power BI)
-
-(Dán bức ảnh Dashboard Power BI của bạn vào ngay dòng bên dưới này)
-
-2. Quá trình tiền xử lý dữ liệu (Python - Google Colab)
-
-(Dán bức ảnh chụp màn hình code Python và bảng kết quả 3 dòng trên Colab vào đây)
 
 🚀 Cấu trúc thư mục dự án
+Sample - Superstore.csv : Dataset mẫu
 
 Data_Cleaning.ipynb: Mã nguồn Python dùng để làm sạch dữ liệu thô ban đầu.
 
