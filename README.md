@@ -28,6 +28,7 @@ Về Thời gian: Doanh thu có xu hướng tăng mạnh vào các tháng cuối
 
 
 🚀 Cấu trúc thư mục dự án
+
 Sample - Superstore.csv : Dataset mẫu
 
 Data_Cleaning.ipynb: Mã nguồn Python dùng để làm sạch dữ liệu thô ban đầu.
