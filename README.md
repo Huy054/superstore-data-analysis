@@ -2,32 +2,71 @@ Phân tích Hiệu quả Kinh doanh Cửa hàng Bán lẻ (Superstore Sales Anal
 
 📌 Tổng quan dự án (Project Overview)
 
-Dự án này là một Mini-project ứng dụng quy trình Data Analytics thực tế để phân tích bộ dữ liệu bán hàng của một hệ thống siêu thị (Superstore). Dự án sử dụng phương pháp kết hợp: dùng Python để tiền xử lý, làm sạch dữ liệu (ETL) và dùng Power BI để xây dựng Dashboard trực quan hóa tương tác.
+Trong ngành bán lẻ, việc tối ưu hóa chuỗi cung ứng và chiến lược giá là yếu tố sống còn. Dự án này tập trung phân tích bộ dữ liệu Superstore Sales (hơn 9.000 giao dịch) để giải quyết các bài toán kinh doanh thực tế: nhận diện các mặt hàng gây thua lỗ, tối ưu hóa phân khúc khách hàng và xác định xu hướng tăng trưởng theo mùa vụ.
 
-📊 Mô tả dữ liệu (Dataset)
+Dự án áp dụng quy trình End-to-End Data Pipeline: từ việc dùng Python để xử lý dữ liệu thô (ETL) đến việc xây dựng hệ thống báo cáo tương tác (Dashboard) trên Power BI, giúp nhà quản lý có cái nhìn đa chiều về sức khỏe tài chính của doanh nghiệp.
 
-Nguồn dữ liệu: Superstore Sales Dataset (từ Kaggle).
+📊 Dữ liệu sử dụng (Dataset)
 
-Nội dung: Chứa thông tin chi tiết về các giao dịch bán hàng bao gồm ngày tháng, phân khúc khách hàng (Segment), danh mục sản phẩm (Category/Sub-Category), doanh thu (Sales) và lợi nhuận (Profit).
+Nguồn: Superstore Dataset (Kaggle).
 
-🛠️ Công nghệ sử dụng (Tech Stack)
+Quy mô: Bao gồm dữ liệu bán hàng của nhiều năm trên toàn khu vực.
 
-Data Cleaning & ETL (Python): Sử dụng thư viện pandas trên môi trường Google Colab để xử lý dữ liệu bị thiếu, chuyển đổi kiểu dữ liệu (Datetime) và trích xuất các đặc trưng mới (Year, Month).
+Đặc trưng chính (Features):
 
-Data Visualization (Power BI): Nhập file dữ liệu đã làm sạch để xây dựng Interactive Dashboard. Tích hợp ngôn ngữ DAX để tạo các thước đo (Measures) tính toán Biên lợi nhuận (Profit Margin).
+Thông tin đơn hàng: Order Date, Ship Mode, Customer Segment.
 
-💡 Kết quả phân tích chính (Key Insights)
+Phân loại sản phẩm: Category, Sub-Category, Product Name.
 
-Sau khi trực quan hóa dữ liệu trên Power BI, chúng ta rút ra được các kết luận chẩn đoán kinh doanh sau:
+Chỉ số tài chính: Sales (Doanh thu), Quantity (Số lượng), Discount (Giảm giá), Profit (Lợi nhuận).
 
-Về Sản phẩm: Nhóm mặt hàng Tables và Bookcases mang lại doanh thu cao nhưng biên lợi nhuận (Profit Margin) đang bị âm. Nguyên nhân chính do lạm dụng chiến lược giảm giá (Discount) quá sâu ở các mặt hàng này.
+🛠️ Công nghệ & Kỹ thuật sử dụng (Tech Stack)
 
-Về Khách hàng: Phân khúc Consumer (Người tiêu dùng cá nhân) là nhóm khách hàng cốt lõi, đóng góp phần lớn vào tổng lợi nhuận của toàn hệ thống, vượt trội hơn so với nhóm Corporate.
+Ngôn ngữ: Python (Google Colab) để tiền xử lý.
 
-Về Thời gian: Doanh thu có xu hướng tăng mạnh vào các tháng cuối năm (Quý 4), đặc biệt là tháng 11 và 12, cho thấy tính mùa vụ rõ rệt trong hành vi mua sắm.
+Thư viện xử lý: pandas (Xử lý missing values, chuẩn hóa kiểu dữ liệu Datetime, trích xuất Year/Month).
 
+Công cụ BI: Power BI Desktop để xây dựng Data Model và Dashboard.
 
-🚀 Cấu trúc thư mục dự án
+Ngôn ngữ phân tích: DAX (Data Analysis Expressions) được sử dụng để tạo các Measures nâng cao như:
+
+Profit Margin (%) = Tổng lợi nhuận / Tổng doanh thu.
+
+Sales Growth = So sánh doanh thu giữa các kỳ.
+
+💡 Phân tích Chuyên sâu & Chẩn đoán (Key Insights)
+
+Thông qua quá trình trực quan hóa, dự án đã phát hiện ra những "điểm mù" trong kinh doanh mà số liệu thô không thể hiện rõ:
+
+Nghịch lý Doanh thu - Lợi nhuận: * Các mặt hàng như Tables (Bàn) và Bookcases (Tủ sách) đóng góp doanh thu rất lớn nhưng lợi nhuận thực tế lại bị âm (thua lỗ).
+
+Nguyên nhân: Do lạm dụng chiến lược giảm giá (Discount) quá cao (>20%) để kích cầu, dẫn đến việc bán càng nhiều càng lỗ.
+
+Tính mùa vụ (Seasonality):
+
+Doanh thu đạt đỉnh vào Tháng 11 và Tháng 12 hàng năm. Điều này cho thấy nhu cầu mua sắm tăng vọt vào dịp lễ hội cuối năm.
+
+Đề xuất: Cần chuẩn bị nguồn hàng và nhân sự từ Quý 3 để tránh tình trạng đứt gãy chuỗi cung ứng.
+
+Phân khúc khách hàng chủ lực:
+
+Phân khúc Consumer (Khách hàng cá nhân) mang lại hơn 50% tổng lợi nhuận. Đây là nhóm khách hàng trung thành và ít nhạy cảm về giá hơn nhóm Corporate.
+
+🖼️ Hình ảnh Demo (Visualizations)
+
+1. Quá trình xử lý dữ liệu sạch bằng Python
+
+Chứng minh khả năng xử lý dữ liệu thô và chuẩn hóa định dạng trước khi phân tích.
+
+2. Dashboard Tổng quan Tài chính (Power BI)
+
+Hệ thống báo cáo tương tác cho phép lọc dữ liệu theo Vùng, Năm và Danh mục sản phẩm.
+
+3. Phân tích chi tiết Lợi nhuận theo Danh mục
+
+Chỉ ra những mặt hàng đang gây thất thoát lợi nhuận cho siêu thị.
+
+🚀 Cấu trúc thư mục
 
 Sample - Superstore.csv : Dataset mẫu
 
