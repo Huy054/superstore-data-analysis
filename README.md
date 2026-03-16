@@ -55,16 +55,13 @@ Phân khúc Consumer (Khách hàng cá nhân) mang lại hơn 50% tổng lợi n
 🖼️ Hình ảnh Demo (Visualizations)
 
 1. Quá trình xử lý dữ liệu sạch bằng Python
+![Kết quả xử lý dữ liệu](./Superstore1.jpeg)
 
-Chứng minh khả năng xử lý dữ liệu thô và chuẩn hóa định dạng trước khi phân tích.
 
-2. Dashboard Tổng quan Tài chính (Power BI)
+2. Dashboard phân tích doan thu (Power BI)
+![Kết quả hệ thống báo cáo tương tác cho phép lọc dữ liệu theo Vùng, Năm và Danh mục sản phẩm.
+](./Superstore2.jpeg)
 
-Hệ thống báo cáo tương tác cho phép lọc dữ liệu theo Vùng, Năm và Danh mục sản phẩm.
-
-3. Phân tích chi tiết Lợi nhuận theo Danh mục
-
-Chỉ ra những mặt hàng đang gây thất thoát lợi nhuận cho siêu thị.
 
 🚀 Cấu trúc thư mục
 
